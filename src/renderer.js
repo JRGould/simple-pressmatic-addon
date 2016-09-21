@@ -11,4 +11,18 @@ module.exports = function ( context ) {
 	remote.getCurrentWindow().openDevTools()
 	window.reload = remote.getCurrentWebContents().reloadIgnoringCache
 
+	hooks.addFilter( 'siteInfoMoreMenu', function ( menu, site ) {
+		
+		menu.push( {
+			label: 'Plugins',
+			enabled: !this.context.router.isActive(`/site-info/${site.id}/my-component` ),
+			click: () => {
+				context.events.send( 'goToRoute', `/site-info/${site.id}/my-component` );
+			}
+		} );
+
+		return menu;
+
+	} );
+
 };
