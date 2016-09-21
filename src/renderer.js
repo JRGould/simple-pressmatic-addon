@@ -11,6 +11,15 @@ module.exports = function ( context ) {
 	remote.getCurrentWindow().openDevTools()
 	window.reload = remote.getCurrentWebContents().reloadIgnoringCache
 
+	// Require component
+	const MyComponent = require('./MyComponent')(context)
+	// Get router handle
+	const Router = context.ReactRouter
+	// Add Route
+	hooks.addContent( 'routesSiteInfo', () => {
+		return <Router.Route key="site-info-my-component" path="/site-info/:siteID/my-component" component={MyComponent}/>
+	} );
+
 	hooks.addFilter( 'siteInfoMoreMenu', function ( menu, site ) {
 		
 		menu.push( {
