@@ -1,19 +1,15 @@
 ## Quick Start
  1. Clone this repo: `git clone git@github.com:JRGould/simple-pressmatic-addon.git my-pressmatic-addon && cd my-pressmatic-addon`
  1. Run `npm install`
- 1. Run initial build: `npm run-script build` 
- 1. Link into Pressmatic's `addon` directory: `ln -s "$(pwd)" ~/Library/Application\ Support/Pressmatic/addons/`
- 1. Restart Pressmatic and activate addon from Settings > Addons 
+ 1. Run initial build: `npm run-script build`
+ 1. Link into Local's `addon` directory: `ln -s "$(pwd)" ~/Library/Application Support/Local by Flywheel/addons`
+ 1. Restart Local and activate addon from Settings > Addons
 
 ## Developing
 
  - To automatically transpile your JS while developing, just start watch task: `npm run-script watch`.
- - The only thing this starter addon currently does is open dev tools in Pressmatic and add a `reload()` function to the window object, type `reload()` into the dev tools console after you've saved/transpiled to see your changes.
+ - The only thing this starter addon currently does is open dev tools in Local and add a `reload()` function to the window object, type `reload()` into the dev tools console after you've saved/transpiled to see your changes.
 
-
-### Pressmatic Addon API
-
-This addon interfaces with Pressmatic using the [Pressmatic Addon API](https://pressmatic.gitbooks.io/addon-api/content/).
 
 ### Installing Dev Dependencies
 `npm install`
