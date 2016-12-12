@@ -1,6 +1,6 @@
 {
-  "name": "pressmatic-addon-stuff",
-  "productName": "Addon for Pressmatic",
+  "name": "local-addon-stuff",
+  "productName": "Addon for Local",
   "version": "1.0.0",
   "author": "Jeff Gould",
   "contributors": [
@@ -10,9 +10,9 @@
     }
   ],
   "keywords": [
-    "pressmatic-addon"
+    "local-addon"
   ],
-  "description": "A simple addon for Pressmatic",
+  "description": "A simple addon for Local",
   "renderer": "lib/renderer.js",
   "license": "MIT",
   "scripts": {
@@ -28,6 +28,6 @@
     "run-when-changed": "^1.3.0"
   },
   "engines": {
-    "pressmatic": "^1.1.0"
+    "local": "^1.1.0"
   }
 }
